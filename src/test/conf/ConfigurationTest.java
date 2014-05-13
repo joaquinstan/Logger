@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 
-import main.conf.Configuration;
+import main.model.conf.Configuration;
 
 import org.junit.Test;
 

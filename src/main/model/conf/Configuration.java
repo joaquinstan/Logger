@@ -1,4 +1,4 @@
-package main.conf;
+package main.model.conf;
 
 import java.io.FileInputStream;
 import java.io.IOException;

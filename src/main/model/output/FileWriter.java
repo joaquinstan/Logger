@@ -1,4 +1,4 @@
-package main.model;
+package main.model.output;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;

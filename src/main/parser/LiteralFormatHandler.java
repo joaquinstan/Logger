@@ -1,6 +1,6 @@
 package main.parser;
 
-import main.model.LogMessage;
+import main.model.messages.LogMessage;
 
 public class LiteralFormatHandler extends FormatHandler{
 	@Override

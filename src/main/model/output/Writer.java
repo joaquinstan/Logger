@@ -1,4 +1,4 @@
-package main.model;
+package main.model.output;
 
 public interface Writer {
 	public boolean init();

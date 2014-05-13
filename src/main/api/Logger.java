@@ -1,28 +1,28 @@
 package main.api;
 
-import main.model.LogMessage;
+import main.model.messages.LogMessage;
+import main.model.output.OutputManager;
 
 public class Logger {
 	
+	OutputManager manager;
 
+	// Default constructor
 	public Logger() {
-
+		manager = new OutputManager();
 	}
 	
-
-	private boolean isPublishable(LogMessage message) {
-		//
-		return true;
+	// Custom configuration
+	public Logger(String configurationFile) {
+		manager = new OutputManager(configurationFile);
 	}
-	
+		
 	private void log(LogMessage message) {
-		if (isPublishable(message)) {
-			// escribir
-		}
+		manager.log(message);
 	}
 	
 	public void debug(String message) {
-
+		//LogMessage m = new LogMessage() 
 	}
 	
 	public void info(String message) {

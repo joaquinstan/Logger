@@ -3,7 +3,7 @@ package main.parser;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import main.model.LogMessage;
+import main.model.messages.LogMessage;
 
 public class DateFormatHandler extends FormatHandler{
 

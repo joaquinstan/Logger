@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import main.model.LogMessage;
+import main.model.messages.LogMessage;
 
 public class FormatChain {
 	

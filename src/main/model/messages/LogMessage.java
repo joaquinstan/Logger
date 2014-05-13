@@ -1,9 +1,11 @@
-package main.model;
+package main.model.messages;
+
+import main.model.CallerInfo;
 
 public class LogMessage {
 	
 	private String formatString;
-	private String level;
+	private Level level;
 	private String messageText;
 	private String stringRepresentation;
 	private CallerInfo callerInfo;
@@ -14,7 +16,7 @@ public class LogMessage {
 		this.messageText = messageText;
 		this.callerInfo = callerInfo;
 		this.stringRepresentation = formatString;
-		this.level=level;
+		this.level = new Level(level);
 		
 	}
 	
@@ -30,8 +32,12 @@ public class LogMessage {
 		return messageText;
 	}
 	
-	public String getMessageLevel(){
+	public Level getMessageLevel(){
 		return level;
+	}
+	
+	public String getMessageLevelAsString(){
+		return level.asString();
 	}
 	
 	public void setStringRepresentation(String newRepresentation){
