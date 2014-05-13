@@ -1,6 +1,6 @@
-package Parser;
+package main.parser;
 
-import Model.LogMessage;
+import main.model.LogMessage;
 
 public class MethodNameFormatHandler extends FormatHandler{
 

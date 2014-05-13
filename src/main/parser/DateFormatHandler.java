@@ -1,9 +1,9 @@
-package Parser;
+package main.parser;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import Model.LogMessage;
+import main.model.LogMessage;
 
 public class DateFormatHandler extends FormatHandler{
 
