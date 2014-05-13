@@ -7,12 +7,12 @@ public class MessageTextFormatHandler extends FormatHandler{
 	@Override
 	public void parse(LogMessage message) {
 		
-		String formatString = message.getFormatString() ;
+		String oldRepr = message.toString() ;
 		//	encontrar y reemplazar el %m por el mensaje
-		String pattern="(?!%)%m"; //Hacerlo mas configurable
-		String newRepr = formatString.replaceAll(pattern, message.getMessageText()); 
+		String pattern="(?<!%)%m"; //Hacerlo mas configurable
+		String newRepr = oldRepr.replaceAll(pattern, message.getMessageText());
 		
-		message.setStringRepresentation(newRepr);
+		if ( newRepr != "") message.setStringRepresentation(newRepr);
 		
 	}
 

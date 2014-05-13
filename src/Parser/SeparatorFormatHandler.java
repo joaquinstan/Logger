@@ -7,11 +7,11 @@ public class SeparatorFormatHandler extends FormatHandler{
 	@Override
 	public void parse(LogMessage message) {
 		
-		String formatString = message.getFormatString();
-		String pattern="(?!%)%n"; 
-		String newRepr = formatString.replaceAll(pattern," ");//obtener el separador de la config...
+		String oldRepr = message.toString();
+		String pattern="(?<!%)%n"; 
+		String newRepr = oldRepr.replaceAll(pattern," ");//obtener el separador de la config...
 	
-		message.setStringRepresentation(newRepr);
+		if ( newRepr != "") message.setStringRepresentation(newRepr);
 	}
 
 }

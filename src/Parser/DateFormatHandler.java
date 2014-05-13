@@ -10,17 +10,18 @@ public class DateFormatHandler extends FormatHandler{
 	@Override
 	public  void parse(LogMessage message){
 		
-		String formatString = message.getFormatString() ;
+		String oldRepr = message.toString() ;
 		Date date=message.getCallerInfo().getTimestamp();
 		//	encontrar y reemplazar el %d
-		String pattern="(?!%)%d\\{(.*)\\}"; //Hacerlo mas configurable
-		String dateFormatString = formatString.replaceAll(pattern,"$1");
+		String pattern=".*(?<!%)%d\\{([^}]*)\\}.*"; //Hacerlo mas configurable
+		String dateFormatString = oldRepr.replaceAll(pattern,"$1");
+
+		if (!dateFormatString.equals(oldRepr)){
+			SimpleDateFormat dateFormat = new SimpleDateFormat(dateFormatString);
 		
-		SimpleDateFormat dateFormat = new SimpleDateFormat(dateFormatString);
-		
-		String newRepr = formatString.replaceAll(pattern, dateFormat.format(date));
-		
-		message.setStringRepresentation(newRepr);
+			String newRepr = oldRepr.replaceAll("(?<!%)%d\\{([^}]*)\\}", dateFormat.format(date));
+			message.setStringRepresentation(newRepr);
+		}
 	}
 
 }

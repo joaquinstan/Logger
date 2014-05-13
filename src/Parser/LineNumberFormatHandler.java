@@ -7,12 +7,12 @@ public class LineNumberFormatHandler extends FormatHandler {
 	@Override
 	public  void parse(LogMessage message){
 		
-		String formatString = message.getFormatString();
+		String oldRepr = message.toString();
 		String lineNumber = Integer.toString(message.getCallerInfo().getLineNumber());
-		String pattern="(?!%)%L"; //Hacerlo mas configurable
-		String newRepr = formatString.replaceAll(pattern,lineNumber);
+		String pattern="(?<!%)%L"; //Hacerlo mas configurable
+		String newRepr = oldRepr.replaceAll(pattern,lineNumber);
 		
 		
-		message.setStringRepresentation(newRepr);
+		if ( newRepr != "") message.setStringRepresentation(newRepr);
 	}
 }

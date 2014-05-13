@@ -7,6 +7,12 @@ public class CallerInfo {
 	private Date timestamp;
 	private Thread callingThread;
 	
+	public CallerInfo(Thread thread, Date date){
+		
+		timestamp=date;
+		callingThread=thread;
+	}
+	
 	public Date getTimestamp(){
 		return timestamp;
 	}

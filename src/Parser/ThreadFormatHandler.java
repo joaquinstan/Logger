@@ -7,13 +7,13 @@ public class ThreadFormatHandler extends FormatHandler{
 	@Override
 	public void parse(LogMessage message) {
 		
-		String formatString = message.getFormatString();
+		String oldRepr = message.toString();
 		String threadName = message.getCallerInfo().getThreadName();
-		String pattern="(?!%)%t"; //Hacerlo mas configurable
-		String newRepr = formatString.replaceAll(pattern,threadName);
+		String pattern="(?<!%)%t"; //Hacerlo mas configurable
+		String newRepr = oldRepr.replaceAll(pattern,threadName);
 		
 		
-		message.setStringRepresentation(newRepr);
+		if ( newRepr != "") message.setStringRepresentation(newRepr);
 	}
 
 }

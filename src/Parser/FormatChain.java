@@ -13,13 +13,16 @@ public class FormatChain {
 	public FormatChain(){
 		handlerList = new ArrayList<FormatHandler>();
 		
-		handlerList.add(new DateFormatHandler());
+		
+		handlerList.add(new MessageTextFormatHandler());
 		handlerList.add(new FileNameFormatHandler());
 		handlerList.add(new LevelFormatHandler());
 		handlerList.add(new LineNumberFormatHandler());
 		handlerList.add(new MethodNameFormatHandler());
 		handlerList.add(new SeparatorFormatHandler());
 		handlerList.add(new ThreadFormatHandler());
+		handlerList.add(new DateFormatHandler());
+		handlerList.add(new LiteralFormatHandler());
 		
 	}
 	

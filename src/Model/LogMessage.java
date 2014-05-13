@@ -8,12 +8,13 @@ public class LogMessage {
 	private String stringRepresentation;
 	private CallerInfo callerInfo;
 	
-	public LogMessage(String formatString,String messageText,CallerInfo callerInfo){
+	public LogMessage(String formatString,String messageText,CallerInfo callerInfo, String level){
 		
 		this.formatString = formatString;
 		this.messageText = messageText;
 		this.callerInfo = callerInfo;
-		this.stringRepresentation = "";
+		this.stringRepresentation = formatString;
+		this.level=level;
 		
 	}
 	

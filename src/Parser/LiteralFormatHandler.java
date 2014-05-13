@@ -6,11 +6,11 @@ public class LiteralFormatHandler extends FormatHandler{
 	@Override
 	public void parse(LogMessage message) {
 		
-		String formatString = message.getFormatString() ;
+		String oldRepr = message.toString() ;
 		String pattern="%%"; //Hacerlo mas configurable
-		String newRepr = formatString.replaceAll(pattern, "%"); 
+		String newRepr = oldRepr.replaceAll(pattern, "%"); 
 		
-		message.setStringRepresentation(newRepr);
+		if ( newRepr != "") message.setStringRepresentation(newRepr);
 		
 	}
 }
