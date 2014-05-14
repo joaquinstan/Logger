@@ -49,5 +49,7 @@ public class Level {
 		return leveln;
 	}
 	
-	
+	public boolean majorThan (Level otherLevel) {
+		return leveln > otherLevel.leveln;
+	}
 }
