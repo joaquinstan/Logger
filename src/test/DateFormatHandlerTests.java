@@ -5,11 +5,11 @@ import static org.junit.Assert.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import org.junit.Test;
+import main.model.CallerInfo;
+import main.model.messages.LogMessage;
+import main.parser.DateFormatHandler;
 
-import Model.CallerInfo;
-import Model.LogMessage;
-import Parser.DateFormatHandler;
+import org.junit.Test;
 
 public class DateFormatHandlerTests {
 

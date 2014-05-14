@@ -1,6 +1,6 @@
-package Parser;
+package main.parser;
 
-import Model.LogMessage;
+import main.model.messages.LogMessage;
 
 public class LineNumberFormatHandler extends FormatHandler {
 
