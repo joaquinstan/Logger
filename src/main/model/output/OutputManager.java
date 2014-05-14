@@ -53,6 +53,7 @@ public class OutputManager {
 
 	private boolean isPublishable(LogMessage message) {
 		return (this.loggerLevel.getLevelNumber() > message.getMessageLevel().getLevelNumber());
+
 	}
 
 	

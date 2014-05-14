@@ -12,6 +12,7 @@ public class LevelFormatHandler extends FormatHandler{
 		String newRepr = oldRepr.replaceAll(pattern,messageLevel);
 		
 		message.setStringRepresentation(newRepr);
+
 	}
 
 	

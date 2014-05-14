@@ -3,8 +3,6 @@ package main.parser;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
-import main.model.CallerInfo;
 import main.model.conf.Configuration;
 import main.model.messages.LogMessage;
 

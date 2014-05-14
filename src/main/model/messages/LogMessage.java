@@ -48,5 +48,7 @@ public class LogMessage {
 	public Date getTimestamp() {
 		// TODO Auto-generated method stub
 		return callerInfo.getTimestamp();
+
+
 	}
 }

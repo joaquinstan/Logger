@@ -17,8 +17,8 @@ public class SeparatorFormatHandler extends FormatHandler{
 		
 		String oldRepr = message.toString();
 		String newRepr = oldRepr.replaceAll(pattern,separator);
-	
-		if ( newRepr != "") message.setStringRepresentation(newRepr);
+
+		message.setStringRepresentation(newRepr);
 	}
 
 }

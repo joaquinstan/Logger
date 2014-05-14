@@ -14,5 +14,6 @@ public class LineNumberFormatHandler extends FormatHandler {
 		String newRepr = oldRepr.replaceAll(pattern,lineNumber);
 		
 		message.setStringRepresentation(newRepr);
+
 	}
 }

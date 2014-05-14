@@ -13,6 +13,7 @@ public class LiteralFormatHandler extends FormatHandler{
 		String newRepr = oldRepr.replaceAll(pattern, "%"); 
 		
 		message.setStringRepresentation(newRepr);
+
 		
 	}
 }

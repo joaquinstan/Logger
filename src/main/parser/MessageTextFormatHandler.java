@@ -12,6 +12,7 @@ public class MessageTextFormatHandler extends FormatHandler{
 		String newRepr = oldRepr.replaceAll(pattern, message.getMessageText());
 		
 		message.setStringRepresentation(newRepr);
+
 		
 	}
 

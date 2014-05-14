@@ -14,6 +14,7 @@ public class MethodNameFormatHandler extends FormatHandler{
 		String newRepr = oldRepr.replaceAll(pattern,methodName);
 		
 		message.setStringRepresentation(newRepr);
+
 	}
 
 	

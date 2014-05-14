@@ -11,9 +11,8 @@ public class ThreadFormatHandler extends FormatHandler{
 		String oldRepr = message.toString();
 		String threadName = message.getCallerInfo().getThreadName();
 		String newRepr = oldRepr.replaceAll(pattern,threadName);
-		
-		
-		if ( newRepr != "") message.setStringRepresentation(newRepr);
+				
+		message.setStringRepresentation(newRepr);
 	}
 
 }
