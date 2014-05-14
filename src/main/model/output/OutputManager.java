@@ -23,8 +23,8 @@ public class OutputManager {
 	public OutputManager(String configurationFile) {
 		conf = new Configuration(configurationFile);
 		formatChain = new FormatChain(conf);
-		configureOutputs();
 		configureLevel();
+		configureOutputs();
 	}
 	
 	private void configureLevel() {
@@ -32,12 +32,17 @@ public class OutputManager {
 	}
 
 	private void configureOutputs() {
+		outputs = new ArrayList<Writer>();
 		ArrayList<String> out = conf.getOutput();
 		for (String output : out) {
+			// TODO: esto si me ponen otro console va a funcionar "mal"
 			if (output.equals("console"))
 				outputs.add(new ConsoleWriter());
 			else
 				outputs.add(new FileWriter(output));
+		}
+		for (Writer output : outputs) {
+			output.init();
 		}
 	}
 
@@ -52,8 +57,7 @@ public class OutputManager {
 	}
 
 	private boolean isPublishable(LogMessage message) {
-		return this.loggerLevel.majorThan(message.getMessageLevel());
-
+		return this.loggerLevel.majorThan(message.getLevel());
 	}
 
 	

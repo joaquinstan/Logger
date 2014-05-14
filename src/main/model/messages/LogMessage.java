@@ -28,12 +28,12 @@ public class LogMessage {
 		return messageText;
 	}
 	
-	public Level getMessageLevel(){
+	public Level getLevel(){
 		return level;
 	}
 	
-	public String getMessageLevelAsString(){
-		return level.asString();
+	public String getLevelAsString(){
+		return level.toString();
 	}
 	
 

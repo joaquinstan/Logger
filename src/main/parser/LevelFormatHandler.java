@@ -8,7 +8,7 @@ public class LevelFormatHandler extends FormatHandler{
 	
 	public  void parse(LogMessage message){
 		String oldRepr = message.toString();
-		String messageLevel = message.getMessageLevelAsString();
+		String messageLevel = message.getLevelAsString();
 		String newRepr = oldRepr.replaceAll(pattern,messageLevel);
 		
 		message.setStringRepresentation(newRepr);

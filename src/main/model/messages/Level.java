@@ -13,35 +13,37 @@ public class Level {
 	private int leveln;
 	
 	public Level(String level) {
-		this.level = level;
 		// TODO: Esto es feo...
 		switch (level) {
 			case "OFF":
+				this.level = "OFF    ";
 				this.leveln = OFF;
 				break;
 			case "DEBUG":
+				this.level = "DEBUG  ";
 				this.leveln = DEBUG;
 				break;
-			case "INFO":
-				this.leveln = INFO;
-				break;
 			case "WARNING":
+				this.level = "WARNING";
 				this.leveln = WARNING;
 				break;
 			case "ERROR":
+				this.level = "ERROR  ";
 				this.leveln = ERROR;
 				break;			
 			case "FATAL":
+				this.level = "FATAL  ";
 				this.leveln = FATAL;
 				break;
+			case "INFO":
 			default:
-				this.level = "INFO";
+				this.level = "INFO   ";
 				this.leveln = INFO;
 				break;
 		}		
 	}
 	
-	public String asString() {
+	public String toString() {
 		return level;
 	}
 
@@ -50,6 +52,6 @@ public class Level {
 	}
 	
 	public boolean majorThan (Level otherLevel) {
-		return leveln > otherLevel.leveln;
+		return leveln <= otherLevel.leveln;
 	}
 }

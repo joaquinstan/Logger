@@ -1,11 +1,11 @@
-package test;
+package test.format;
 
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
 
-public class MethodNameFormatHandlerTests {
+public class MessageTextFormatHandlerTests {
 
 	@Before
 	public void setUp() throws Exception {

@@ -35,7 +35,7 @@ public class Logger {
 	}
 	
 	public void warn(String message) {
-		LogMessage logMessage = new LogMessage(message,new CallerInfo(new Date()),"WARN");
+		LogMessage logMessage = new LogMessage(message,new CallerInfo(new Date()),"WARNING");
 		log(logMessage);
 	}
 	
