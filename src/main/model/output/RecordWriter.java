@@ -4,12 +4,12 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 
-public class FileWriter implements Writer {
+public class RecordWriter implements Writer {
 
 	private String filename;
 	private PrintWriter writer;
 	
-	public FileWriter(String filename) {
+	public RecordWriter(String filename) {
 		writer = null;
 		this.filename = filename;
 	}

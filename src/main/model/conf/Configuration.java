@@ -28,9 +28,9 @@ public class Configuration {
 	private void configure(String file) {
 		InputStream input = null;
 		conf = new Properties();
-		Validator validator=new Validator();
+		Validator validator = new Validator();
 		if (!validator.validate(file)){
-			System.out.println("Archivo inválido. Pasará a leer por default");
+			System.out.println("Archivo inválido. Se usará la configuración por default");
 			return;
 		}
 		try {
@@ -63,21 +63,5 @@ public class Configuration {
 	
 	public ArrayList<String> getOutput() {
 		return new ArrayList<String>(Arrays.asList(conf.getProperty("output",defaultOutput).split(",")));
-	}
-	
-	public void setMode(String mode) {
-		conf.setProperty("mode", mode);
-	}
-	
-	public void setPattern(String pattern) {
-		conf.setProperty("pattern", pattern);
-	}
-	
-	public void setSeparator(String separator) {
-		conf.setProperty("separator", separator);
-	}
-	
-	public void setOutput(String output) {
-		conf.setProperty("output", output);
 	}
 }

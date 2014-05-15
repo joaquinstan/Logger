@@ -16,30 +16,31 @@ public class OutputManager {
 	public OutputManager() {
 		conf = new Configuration();
 		formatChain = new FormatChain(conf);
-		configureLevel();
-		configureOutputs();
+		configure();
 	}
-	
+
 	public OutputManager(String configurationFile) {
 		conf = new Configuration(configurationFile);
 		formatChain = new FormatChain(conf);
-		configureLevel();
-		configureOutputs();
+		configure();
 	}
 	
-	private void configureLevel() {
+	private void configure() {
+		configureLevel(conf.getMode());
+		configureOutputs(conf.getOutput());
+	}
+	
+	private void configureLevel(String level) {
 		loggerLevel = new Level(conf.getMode());
 	}
 
-	private void configureOutputs() {
+	private void configureOutputs(ArrayList<String> out) {
 		outputs = new ArrayList<Writer>();
-		ArrayList<String> out = conf.getOutput();
 		for (String output : out) {
-			// TODO: esto si me ponen otro console va a funcionar "mal"
 			if (output.equals("console"))
 				outputs.add(new ConsoleWriter());
 			else
-				outputs.add(new FileWriter(output));
+				outputs.add(new RecordWriter(output));
 		}
 		for (Writer output : outputs) {
 			output.init();
@@ -47,6 +48,10 @@ public class OutputManager {
 	}
 
 
+	private boolean isPublishable(LogMessage message) {
+		return this.loggerLevel.majorThan(message.getLevel());
+	}
+	
 	public void log(LogMessage message) {
 		if (isPublishable(message)) {
 			formatChain.parse(message);
@@ -56,9 +61,9 @@ public class OutputManager {
 		}
 	}
 
-	private boolean isPublishable(LogMessage message) {
-		return this.loggerLevel.majorThan(message.getLevel());
+	public void end() {
+		for (Writer writer : outputs) {
+			writer.end();
+		}
 	}
-
-	
 }

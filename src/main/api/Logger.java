@@ -48,4 +48,8 @@ public class Logger {
 		LogMessage logMessage = new LogMessage(message,new CallerInfo(new Date()),"FATAL");
 		log(logMessage);
 	}
+	
+	public void end() {
+		manager.end();
+	}
 }

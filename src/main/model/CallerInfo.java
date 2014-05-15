@@ -7,8 +7,7 @@ public class CallerInfo {
 	private Date timestamp;
 	
 	public CallerInfo(Date date){
-		
-		timestamp=date;
+		timestamp = date;
 	}
 	
 	public Date getTimestamp(){
@@ -16,22 +15,21 @@ public class CallerInfo {
 	}
 	
 	public String getThreadName(){
-		
 		return Thread.currentThread().getName();
 	}
 	
 	public int getLineNumber(){
-		int len=Thread.currentThread().getStackTrace().length-1;
+		int len = Thread.currentThread().getStackTrace().length-1;
 		return Thread.currentThread().getStackTrace()[len].getLineNumber();
-	}//magia
+	}
 	
 	public String getCallingMethodName(){
-		int len=Thread.currentThread().getStackTrace().length-1;
+		int len = Thread.currentThread().getStackTrace().length-1;
 		return Thread.currentThread().getStackTrace()[len].getMethodName();
-	}//magia
+	}
 
 	public String getCallingFileName() {
-		int len=Thread.currentThread().getStackTrace().length-1;
+		int len = Thread.currentThread().getStackTrace().length-1;
 		return Thread.currentThread().getStackTrace()[len].getFileName();
-	}//magia
+	}
 }

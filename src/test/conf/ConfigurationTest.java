@@ -40,45 +40,4 @@ public class ConfigurationTest {
 		
 		assertEquals("|", userConf.getSeparator());
 	}
-	
-	@Test
-	public void testSetMode() {
-		Configuration defaultConf = new Configuration();
-		
-		defaultConf.setMode("WARNING");
-		
-		assertEquals("WARNING", defaultConf.getMode());
-	}
-
-	@Test
-	public void testSetPattern() {
-		Configuration defaultConf = new Configuration();
-		
-		defaultConf.setPattern("%m");
-		
-		assertEquals("%m", defaultConf.getPattern());
-	}
-
-	@Test
-	public void testSetSeparator() {
-		Configuration defaultConf = new Configuration();
-		
-		defaultConf.setSeparator("|");
-		
-		assertEquals("|", defaultConf.getSeparator());
-	}
-	
-	@Test
-	public void testSetOutput() {
-		Configuration defaultConf = new Configuration();
-		ArrayList<String> output = null;
-		
-		defaultConf.setOutput("log.txt,console");
-				
-		output = defaultConf.getOutput();
-		assertEquals(2, output.size());
-		assertTrue(output.contains("console"));
-		assertTrue(output.contains("log.txt"));
-	}
-
 }

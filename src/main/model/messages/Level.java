@@ -16,11 +16,11 @@ public class Level {
 		// TODO: Esto es feo...
 		switch (level) {
 			case "OFF":
-				this.level = "OFF    ";
+				this.level = "OFF";
 				this.leveln = OFF;
 				break;
 			case "DEBUG":
-				this.level = "DEBUG  ";
+				this.level = "DEBUG";
 				this.leveln = DEBUG;
 				break;
 			case "WARNING":
@@ -28,16 +28,16 @@ public class Level {
 				this.leveln = WARNING;
 				break;
 			case "ERROR":
-				this.level = "ERROR  ";
+				this.level = "ERROR";
 				this.leveln = ERROR;
 				break;			
 			case "FATAL":
-				this.level = "FATAL  ";
+				this.level = "FATAL";
 				this.leveln = FATAL;
 				break;
 			case "INFO":
 			default:
-				this.level = "INFO   ";
+				this.level = "INFO";
 				this.leveln = INFO;
 				break;
 		}		
