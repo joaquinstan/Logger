@@ -2,6 +2,7 @@ package main.parser;
 
 import main.model.messages.LogMessage;
 
+//Format handler for the line number
 public class LineNumberFormatHandler implements FormatHandler {
 
 	static final String pattern = "(?<!%)%L";

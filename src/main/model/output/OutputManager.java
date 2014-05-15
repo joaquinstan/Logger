@@ -6,6 +6,7 @@ import main.model.conf.Configuration;
 import main.model.messages.*;
 import main.parser.FormatChain;
 
+// Class in charge of delivering the final message to Writer classes
 public class OutputManager {
 
 	Configuration conf;

@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Properties;
 
+// A class that represents a given configuration for the Logger
 public class Configuration {
 	
 	private static final String defaultMode = "INFO";

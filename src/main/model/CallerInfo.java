@@ -2,7 +2,7 @@ package main.model;
 
 import java.util.Date;
 
-// Information about the caller of the log message
+// Class that provides information about the caller of the log message
 public class CallerInfo {
 	private Date timestamp;
 	

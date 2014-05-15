@@ -4,6 +4,7 @@ import java.util.Date;
 
 import main.model.CallerInfo;
 
+// Represents the message that will be logged
 public class LogMessage {
 
 	private Level level;

@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.Properties;
 import java.util.ArrayList;
 
+// Provides validation for the configuration file
 public class Validator {
 
 	private Properties conf;

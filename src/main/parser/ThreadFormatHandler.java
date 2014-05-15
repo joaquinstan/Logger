@@ -2,6 +2,7 @@ package main.parser;
 
 import main.model.messages.LogMessage;
 
+//Format handler for the Thread name
 public class ThreadFormatHandler implements FormatHandler{
 
 	static final String pattern = "(?<!%)%t";

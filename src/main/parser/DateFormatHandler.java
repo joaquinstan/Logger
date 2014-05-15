@@ -5,6 +5,7 @@ import java.util.Date;
 
 import main.model.messages.LogMessage;
 
+// Format handler for the Date 
 public class DateFormatHandler implements FormatHandler{
 
 	static final String dateFormatPattern = ".*(?<!%)%d\\{([^}]*)\\}.*";

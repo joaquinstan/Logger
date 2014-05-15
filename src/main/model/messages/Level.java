@@ -1,5 +1,6 @@
 package main.model.messages;
 
+// Represents the Level of a LogMessage
 public class Level {
 	
 	public static final int OFF = 0;

@@ -6,6 +6,7 @@ import java.util.List;
 import main.model.conf.Configuration;
 import main.model.messages.LogMessage;
 
+// A chain of FormatHandlers that translate the LogMessage from a formatString
 public class FormatChain {
 	
 	private List<FormatHandler> handlerList;

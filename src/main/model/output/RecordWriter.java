@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 
+//A Writer implementing class that writes to a certain File
 public class RecordWriter implements Writer {
 
 	private String filename;

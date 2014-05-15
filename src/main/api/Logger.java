@@ -6,6 +6,7 @@ import main.model.CallerInfo;
 import main.model.messages.LogMessage;
 import main.model.output.OutputManager;
 
+// Main API Class, Represents a Logger
 public class Logger {
 	
 	OutputManager manager;

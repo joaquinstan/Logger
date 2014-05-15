@@ -2,6 +2,7 @@ package main.parser;
 
 import main.model.messages.LogMessage;
 
+//Format handler for the message Level
 public class LevelFormatHandler implements FormatHandler{
 
 	static final String pattern = "(?<!%)%p";

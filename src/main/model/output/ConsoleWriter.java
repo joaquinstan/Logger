@@ -1,5 +1,6 @@
 package main.model.output;
 
+// A Writer implementing class that writes to Console
 public class ConsoleWriter implements Writer {
 
 	@Override
