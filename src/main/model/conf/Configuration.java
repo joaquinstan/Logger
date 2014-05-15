@@ -28,6 +28,11 @@ public class Configuration {
 	private void configure(String file) {
 		InputStream input = null;
 		conf = new Properties();
+		Validator validator=new Validator();
+		if (!validator.validate(file)){
+			System.out.println("Archivo inválido. Pasará a leer por default");
+			return;
+		}
 		try {
 			input = new FileInputStream(file);
 			conf.load(input);

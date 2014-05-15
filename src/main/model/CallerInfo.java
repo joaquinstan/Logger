@@ -21,19 +21,17 @@ public class CallerInfo {
 	}
 	
 	public int getLineNumber(){
-			
-		return 0;
-	}
+		int len=Thread.currentThread().getStackTrace().length-1;
+		return Thread.currentThread().getStackTrace()[len].getLineNumber();
+	}//magia
 	
 	public String getCallingMethodName(){
-		
-		return null;
-	}
+		int len=Thread.currentThread().getStackTrace().length-1;
+		return Thread.currentThread().getStackTrace()[len].getMethodName();
+	}//magia
 
 	public String getCallingFileName() {
-
-		return null;
-
-
-	}
+		int len=Thread.currentThread().getStackTrace().length-1;
+		return Thread.currentThread().getStackTrace()[len].getFileName();
+	}//magia
 }
