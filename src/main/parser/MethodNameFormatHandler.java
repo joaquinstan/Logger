@@ -2,7 +2,7 @@ package main.parser;
 
 import main.model.messages.LogMessage;
 
-public class MethodNameFormatHandler extends FormatHandler{
+public class MethodNameFormatHandler implements FormatHandler{
 
 	static final String pattern = "(?<!%)%M";
 	

@@ -2,7 +2,7 @@ package main.parser;
 
 import main.model.messages.LogMessage;
 
-public class SeparatorFormatHandler extends FormatHandler{
+public class SeparatorFormatHandler implements FormatHandler{
 
 	static final String pattern = "(?<!%)%n";
 	private String separator;

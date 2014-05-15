@@ -2,7 +2,7 @@ package main.parser;
 
 import main.model.messages.LogMessage;
 
-public class ThreadFormatHandler extends FormatHandler{
+public class ThreadFormatHandler implements FormatHandler{
 
 	static final String pattern = "(?<!%)%t";
 	@Override

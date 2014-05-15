@@ -2,7 +2,7 @@ package main.parser;
 
 import main.model.messages.LogMessage;
 
-public class LiteralFormatHandler extends FormatHandler{
+public class LiteralFormatHandler implements FormatHandler{
 	
 	static final String pattern = "%%";
 	
