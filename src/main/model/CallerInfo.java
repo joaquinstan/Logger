@@ -19,16 +19,19 @@ public class CallerInfo {
 	}
 	
 	public int getLineNumber(){
+		// TODO: Esto no funciona como debería:
 		int len = Thread.currentThread().getStackTrace().length-1;
 		return Thread.currentThread().getStackTrace()[len].getLineNumber();
 	}
 	
 	public String getCallingMethodName(){
+		// TODO: Esto no funciona como debería:
 		int len = Thread.currentThread().getStackTrace().length-1;
 		return Thread.currentThread().getStackTrace()[len].getMethodName();
 	}
 
 	public String getCallingFileName() {
+		// TODO: Esto no funciona como debería:
 		int len = Thread.currentThread().getStackTrace().length-1;
 		return Thread.currentThread().getStackTrace()[len].getFileName();
 	}
